@@ -51,6 +51,14 @@ body {
 	height: 20px;
 }
 
+#result img {
+	height: 200px;
+}
+
+#result button {
+	height: 50px;
+}
+
 table
 {
     border-collapse: collapse;
