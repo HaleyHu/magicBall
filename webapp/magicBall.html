@@ -62,16 +62,17 @@ init()
 
 $("#ball").on("click", function() {
 	if(time <= 0) {
-		$("#map").html("");
+		$("#map").fadeOut("slow").html("");
+		$("#result").fadeIn("slow");
 		$("#resultImg").attr("src", "images/" + flags[targetIndex]);
-		$("#result").show();
 	}
 });
 
 $("#retry").on("click", function() {
-	$("#result").hide();
 	targetIndex = -1;
 	time = 5;
+	$("#map").fadeIn("slow");
+	$("#result").fadeOut("slow");
 	$("#time").text(time + 's' );
 	init();
 	after();
