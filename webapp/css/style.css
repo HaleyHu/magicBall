@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+.main {
+	margin:0 auto;
+	width: 1000px;
+	padding: 5px;
+	height: auto;
+	min-height:600px;
+	background-color: #d2d8de;
+}
+
+.header {
+	font-size: 30px;
+	margin: 20px;
+}
+
+.desc {
+	font-size: 16px;
+	margin: 10px;
+}
+
+.content {
+	margin: 10px;
+	width: 98%;
+}
+
+.left {
+	width: 350px;
+	display: inline-block;
+}
+
+.right {
+	width: 400px;
+	display: inline-block;
+}
+
+.right .index {
+	width: 10px;
+}
+
+.right .flag {
+	width: 30px;
+}
+
+.right .flag img {
+	height: 20px;
+}
+
+table
+{
+    border-collapse: collapse;
+    border: none;
+    width: 200px;
+}
+td
+{
+    border: solid #000 1px;
+}
