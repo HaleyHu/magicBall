@@ -14,26 +14,28 @@
 <div class="main" align="center">
 	<div class="header">神奇的魔力水晶球</div>
 	<div class="author">胡海斌</div>
-	<div class="desc">传说，神秘的吉普赛人拥有一个魔力水晶球，它能够轻易的知晓人们的所思所想。<br/>
-	请你在心里默想一个两位数的数字（比如说76），用它分别减去其十位数和个位数得到结果（如76 - 7 -6 = 结果63），从表格中查到你的结果，看看数字对应图片是什么，请集中精力在你查到的符号上面五秒钟，然后点击魔力水晶球，看看预测的结果吧！</div>
+	<div class="desc"><p>传说，神秘的吉普赛人拥有一个魔力水晶球，它能够轻易看破人们的内心。</p>
+	<p>请你在心里默想一个两位数，用它分别减去其十位数和个位数得到结果，从表格中查到你的结果对应的图片是什么，请集中精力在你查到的图片上面五秒钟，然后点击魔力水晶球，看看预测的结果吧！</p>
+	<p>例如：你想的数字是76，76-7-6=63，在表格中查找结果63对应的图片，记下这个图片，5秒钟后点击魔力水晶球立即显示它预测的结果，看看预测是否准确呢？</p></div>
 	<div class="content">
-		<div class="left">
-			<img src="images/ball.jpg" id="ball"/><br/><span class="time" id="time">5s</span>
-		</div>
-		<div class="right">
+		<div class="mapDiv">
 			<table id="map">
 			</table>
-			<div id="result" style="display:none;">
-				<img src="" id="resultImg"/><br/>
-				<button id="retry">再测一次</button>
-			</div>
+		</div>
+		<div id="result" style="display:none;">
+			<img src="" id="resultImg"/><br/>
+			<button id="retry">再测一次</button>
 		</div>
 	</div>
+</div>
+<div class="ball">
+	<span class="time" id="time">5s</span><br/>
+	<img src="images/ball.jpg" id="ball"/>
 </div>
 
 <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
 <script type="text/javascript">
-var flags = new Array("afh.gif","agt.gif","aiji.gif","airlan.gif","aiseby.gif","aishny.gif","alq.gif","aman.gif","andaor.gif","angla.gif","antigua.gif","aodili.gif","aodly.gif","arbny.gif","arjly.gif","asbj.gif","babaduos.gif","bahama.gif","baie.gif","balagui.gif","balin.gif","banama.gif","baojly.gif","baxi.gif","baxin.gif","beinin.gif","bilishi.gif","bilu.gif","bingdao.gif","bishao.gif","bjnfs.gif","bjst.gif","blst.gif","blwy.gif","bociwana.gif","boduolige.gif","bohei.gif","bolan.gif","bolizi.gif","budan.gif","bulongdi.gif","chaoxian.gif","chdjny.gif","china.gif","danmai.gif","deguo.gif","dmnj.gif","dmnk.gif","duoge.gif","egdr.gif","eltly.gif","eluosi.gif","faguo.gif","fandigang.gif","feiji.gif","fenlan.gif","flb.gif","fodej.gif","gangguo.gif","gbya.gif","glby.gif","gljy.gif","glnd.gif","gsdlj.gif","guba.gif","guoqi.gif","gyn.gif","haidi.gif","hanguo.gif","hdls.gif","helan.gif","hsk.gif","jbbw.gif","jerjs.gif","jiana.gif","jiapeng.gif","jibuti.gif","jieke.gif","jineiya.gif","jlbs.gif","jnd.gif","jpzh.gif","kamailong.gif","katar.gif","kemoluo.gif","keniya.gif","ketediwa.gif","kldy.gif","kuke.gif","kwt.gif","laisuotuo.gif","laowo.gif","latwy.gif","lbn.gif","libia.gif","libiliya.gif","liezdsd.gif","litaow.gif","luomny.gif","lusbao.gif","luwangda.gif","malawei.gif","mali.gif","mardf.gif","mart.gif","mashr.gif","mdjsj.gif","mei.gif","menggu.gif","miand.gif","minzhugg.gif","mjl.gif","mklnxy.gif","mlqs.gif","mltny.gif","mlxy.gif","molog.gif","monage.gif","mordw.gif","msbk.gif","mxg.gif","nanfei.gif","naolu.gif","nibor.gif","niriliya.gif","nirir.gif","niuai.gif","njlg.gif","nmby.gif","nslf.gif","nuowei.gif","palao.gif","putaoya.gif","riben.gif","ruidian.gif","ruishi.gif","saisher.gif","samoya.gif","sdmhplxb.gif","shate.gif","sjchnws.gif","slfk.gif","sllang.gif","sllk.gif","slwny.gif","slxy.gif","snjer.gif","spls.gif","sudan.gif","sulinan.gif","suoluomen.gif","suomali.gif","swshlan.gif","swstglnd.gif","tai.gif","tangjia.gif","tjk.gif","tlndhdbg.gif","tsny.gif","tukm.gif","tunis.gif","turq.gif","tuwalu.gif","uzbk.gif","wdml.gif","wenlai.gif","wgd.gif","wlgui.gif","wnat.gif","wnrl.gif","wukelan.gif","xiby.gif","xila.gif","xishl.gif","xjp.gif","xulia.gif","xxl.gif","xyl.gif","yamj.gif","yamnia.gif","ydl.gif","yemen.gif","yindu.gif","ying.gif","yini.gif","yl.gif","ylk.gif","ysl.gif","yuedan.gif","yuenan.gif","zanbiya.gif","zhade.gif","zhili.gif","zhongfei.gif");
+var flags = new Array("afh.gif","agt.gif","aiji.gif","airlan.gif","aiseby.gif","aishny.gif","alq.gif","aman.gif","andaor.gif","angla.gif","antigua.gif","aodili.gif","aodly.gif","arbny.gif","arjly.gif","asbj.gif","babaduos.gif","bahama.gif","baie.gif","balagui.gif","balin.gif","banama.gif","baojly.gif","baxi.gif","baxin.gif","beinin.gif","bilishi.gif","bilu.gif","bingdao.gif","bishao.gif","bjnfs.gif","bjst.gif","blst.gif","blwy.gif","bociwana.gif","boduolige.gif","bohei.gif","bolan.gif","bolizi.gif","budan.gif","bulongdi.gif","chaoxian.gif","chdjny.gif","china.gif","danmai.gif","deguo.gif","dmnj.gif","dmnk.gif","duoge.gif","egdr.gif","eltly.gif","eluosi.gif","faguo.gif","fandigang.gif","feiji.gif","fenlan.gif","flb.gif","fodej.gif","gangguo.gif","gbya.gif","glby.gif","gljy.gif","glnd.gif","gsdlj.gif","guba.gif","gyn.gif","haidi.gif","hanguo.gif","hdls.gif","helan.gif","hsk.gif","jbbw.gif","jerjs.gif","jiana.gif","jiapeng.gif","jibuti.gif","jieke.gif","jineiya.gif","jlbs.gif","jnd.gif","jpzh.gif","kamailong.gif","katar.gif","kemoluo.gif","keniya.gif","ketediwa.gif","kldy.gif","kuke.gif","kwt.gif","laisuotuo.gif","laowo.gif","latwy.gif","lbn.gif","libia.gif","libiliya.gif","liezdsd.gif","litaow.gif","luomny.gif","lusbao.gif","luwangda.gif","malawei.gif","mali.gif","mardf.gif","mart.gif","mashr.gif","mdjsj.gif","mei.gif","menggu.gif","miand.gif","minzhugg.gif","mjl.gif","mklnxy.gif","mlqs.gif","mltny.gif","mlxy.gif","molog.gif","monage.gif","mordw.gif","msbk.gif","mxg.gif","nanfei.gif","naolu.gif","nibor.gif","niriliya.gif","nirir.gif","niuai.gif","njlg.gif","nmby.gif","nslf.gif","nuowei.gif","palao.gif","putaoya.gif","riben.gif","ruidian.gif","ruishi.gif","saisher.gif","samoya.gif","sdmhplxb.gif","shate.gif","sjchnws.gif","slfk.gif","sllang.gif","sllk.gif","slwny.gif","slxy.gif","snjer.gif","spls.gif","sudan.gif","sulinan.gif","suoluomen.gif","suomali.gif","swshlan.gif","swstglnd.gif","tai.gif","tangjia.gif","tjk.gif","tlndhdbg.gif","tsny.gif","tukm.gif","tunis.gif","turq.gif","tuwalu.gif","uzbk.gif","wdml.gif","wenlai.gif","wgd.gif","wlgui.gif","wnat.gif","wnrl.gif","wukelan.gif","xiby.gif","xila.gif","xishl.gif","xjp.gif","xulia.gif","xxl.gif","xyl.gif","yamj.gif","yamnia.gif","ydl.gif","yemen.gif","yindu.gif","ying.gif","yini.gif","yl.gif","ylk.gif","ysl.gif","yuedan.gif","yuenan.gif","zanbiya.gif","zhade.gif","zhili.gif","zhongfei.gif");
 var targetIndex = -1;
 function init() {
 	var map = $("#map");
@@ -87,7 +89,7 @@ function after(){
             after();
         },1000);
     }else{
-        $("#time").text("");
+        $("#time").text(" ");
     }
 }
 

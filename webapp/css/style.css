@@ -7,7 +7,6 @@ body {
 
 .main {
 	margin:0 auto;
-	width: 1000px;
 	padding: 5px;
 	height: auto;
 	min-height:600px;
@@ -24,31 +23,18 @@ body {
 	margin: 10px;
 }
 
+.desc p {
+	text-align: left;
+	text-indent:2em;
+}
+
 .content {
 	margin: 10px;
 	width: 98%;
 }
 
-.left {
-	width: 350px;
-	display: inline-block;
-}
-
-.right {
-	width: 400px;
-	display: inline-block;
-}
-
-.right .index {
-	width: 10px;
-}
-
-.right .flag {
-	width: 30px;
-}
-
-.right .flag img {
-	height: 20px;
+.flag img {
+	width: 50px;
 }
 
 #result img {
@@ -68,4 +54,9 @@ table
 td
 {
     border: solid #000 1px;
+    padding: 0px;
+}
+
+.ball {
+	text-align: center;
 }
